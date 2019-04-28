@@ -5,11 +5,25 @@
     <title>Questão 12</title>
 </head>
 <body>
-    <div id="x">13</div>
-    <div id="y">8</div>
+    <div id="x">7</div>
+    <div id="y">5</div>
     <div id="produto"></div>
     <div id="soma"></div>
     <script>
+        var x;
+        var y;
+        var produto;
+        var soma;
+        //Referencias
+        x=document.getElementById("x");
+        y=document.getElementById("y");
+        produto=document.getElementById("produto");
+        soma=document.getElementById("soma");
+        //Textos
+        tX=parseInt(x.textContent);
+        tY=parseInt(y.textContent);
+        produto.textContent="O produto de "+tX+" e "+tY+" é "+(tX*tY);
+        soma.textContent="A soma de "+tX+" e "+tY+" é "+(tX+tY);
     </script>
 </body>
 </html>
