@@ -52,14 +52,12 @@
                 resultado.textContent = "Parabéns Fulano! Você está aprovado com média 70!"
             else 
                 resultado.textContent = "Você está reprovado com média 50!"
-            if(Number(confeitaria.textContent)<60)
-                melhorias.textContent = melhorias.textContent  + "Fulano, considere estudar mais confeitaria!"
+            if(Number(confeitaria.textContent)<60) 
+                melhorias.innerHTML += nome.textContent+", considere estudar mais confeitaria!</p>"
             if(Number(coberturas.textContent)<60)
-                melhorias.textContent = melhorias.textContent  + " Fulano, considere estudar mais coberturas!"
+                melhorias.innerHTML += "<p>"+nome.textContent+", considere estudar mais coberturas!</p>"
             if(Number(bolos.textContent)<60)
-                melhorias.textContent = melhorias.textContent  + " Fulano, considere estudar mais bolos!"
-
-
+                melhorias.innerHTML += "<p>"+nome.textContent+", considere estudar mais bolos!</p>"
         }
     </script>
 </body>
