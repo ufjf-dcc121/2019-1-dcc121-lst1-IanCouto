@@ -12,9 +12,9 @@
 
         <p>
         Olá <span contenteditable="true" id="nome">Fulano</span>, você está matriculado há <span contenteditable="true" id="tempo">2</span> 
-        anos no curso de Confeitaria e as notas das suas disciplinas são: <span contenteditable="true" id="confeitaria">70</span> 
-        em Confeitaria Básica <span contenteditable="true" id="coberturas">80</span> em Coberturas 
-        e <span contenteditable="true" id="bolos">60</span> em Broas e Bolos.
+        anos no curso de Confeitaria e as notas das suas disciplinas são: <span contenteditable="true" id="confeitaria">0</span> 
+        em Confeitaria Básica <span contenteditable="true" id="coberturas">0</span> em Coberturas 
+        e <span contenteditable="true" id="bolos">0</span> em Broas e Bolos.
         </p>
 
         <p id="resultado">  </p>
@@ -23,6 +23,7 @@
         <button id="limpar">Limpar</button>
 
         <p id="melhorias"></p>
+
     </main>
     
     <script>
@@ -51,6 +52,14 @@
                 resultado.textContent = "Parabéns Fulano! Você está aprovado com média 70!"
             else 
                 resultado.textContent = "Você está reprovado com média 50!"
+            if(Number(confeitaria.textContent)<60)
+                melhorias.textContent = melhorias.textContent  + "Fulano, considere estudar mais confeitaria!"
+            if(Number(coberturas.textContent)<60)
+                melhorias.textContent = melhorias.textContent  + " Fulano, considere estudar mais coberturas!"
+            if(Number(bolos.textContent)<60)
+                melhorias.textContent = melhorias.textContent  + " Fulano, considere estudar mais bolos!"
+
+
         }
     </script>
 </body>
