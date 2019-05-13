@@ -17,10 +17,10 @@
         e <span contenteditable="true" id="bolos">60</span> em Broas e Bolos.
         </p>
 
-        <p id="resultado"> a </p>
+        <p id="resultado">  </p>
 
         <button id="avaliar">Avaliar</button>
-        <button id="limpar">limpar</button>
+        <button id="limpar">Limpar</button>
 
         <p id="melhorias"></p>
     </main>
@@ -35,15 +35,23 @@
         var botaoLimpar = document.getElementById("limpar")
         var resultado = document.getElementById("resultado")
         var melhorias = document.getElementById("melhorias")
-        var media = document.getElementById("")
+        var media = (Number(confeitaria.textContent) + Number(coberturas.textContent) + Number(bolos.textContent))/3
 
-        addEventListener("click", limparClick)
+        botaoLimpar.addEventListener("click", limparClick)
 
         function limparClick(){
             melhorias.textContent = null
             resultado.textContent = null
         }
-        
+         
+        botaoAvaliar.addEventListener("click", avaliar)
+
+        function avaliar(){
+            if(media>=70)
+                resultado.textContent = "Parabéns Fulano! Você está aprovado com média 70!"
+            else 
+                resultado.textContent = "Você está reprovado com média 50!"
+        }
     </script>
 </body>
 </html>
