@@ -12,9 +12,9 @@
 
         <p>
         Olá <span contenteditable="true" id="nome">Fulano</span>, você está matriculado há <span contenteditable="true" id="tempo">2</span> 
-        anos no curso de Confeitaria e as notas das suas disciplinas são: <span contenteditable="true" id="confeitaria">0</span> 
-        em Confeitaria Básica <span contenteditable="true" id="coberturas">0</span> em Coberturas 
-        e <span contenteditable="true" id="bolos">0</span> em Broas e Bolos.
+        anos no curso de Confeitaria e as notas das suas disciplinas são: <span contenteditable="true" id="confeitaria">70</span> 
+        em Confeitaria Básica <span contenteditable="true" id="coberturas">80</span> em Coberturas 
+        e <span contenteditable="true" id="bolos">60</span> em Broas e Bolos.
         </p>
 
         <p id="resultado">  </p>
@@ -36,8 +36,7 @@
         var botaoLimpar = document.getElementById("limpar")
         var resultado = document.getElementById("resultado")
         var melhorias = document.getElementById("melhorias")
-        var media = (Number(confeitaria.textContent) + Number(coberturas.textContent) + Number(bolos.textContent))/3
-
+        var media 
         botaoLimpar.addEventListener("click", limparClick)
 
         function limparClick(){
@@ -47,8 +46,14 @@
          
         botaoAvaliar.addEventListener("click", avaliar)
 
+        function calcMedia(media){
+            media = (Number(confeitaria.textContent) + Number(coberturas.textContent) + Number(bolos.textContent))/3
+            return media
+        }
+
         function avaliar(){
             limparClick()
+            media = calcMedia()
             if(media>=70)
                 resultado.textContent = "Parabéns Fulano! Você está aprovado com média 70!"
             else 
