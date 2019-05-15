@@ -48,6 +48,7 @@
         botaoAvaliar.addEventListener("click", avaliar)
 
         function avaliar(){
+            limparClick()
             if(media>=70)
                 resultado.textContent = "Parabéns Fulano! Você está aprovado com média 70!"
             else 
